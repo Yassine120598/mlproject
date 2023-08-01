@@ -1,0 +1,47 @@
+version: "3.1"
+
+intents:
+- greet
+- goodbye
+- ask_for_information
+- modify_dates
+- add_collaborator
+
+entities:
+- name
+- job
+- start_date
+- end_date
+
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+  job:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: job
+  start_date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: start_date
+  end_date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: end_date
+
+responses:
+  utter_greet:
+  - text: "Hello, I am the Olean Holidays assistant. How can I assist you?"
+  utter_goodbye:
+  - text: "Goodbye!"
+
+actions:
+- action_get_information
+- action_modify_dates
+- action_add_collaborator

@@ -1,0 +1,40 @@
+version: "3.1"
+
+stories:
+- story: User asks for information
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_information
+  - action: action_get_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: User modifies dates
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: modify_dates
+  - action: action_modify_dates
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: User adds a collaborator
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: add_collaborator
+  - action: action_add_collaborator
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: User adds a collaborator then asks for information
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: add_collaborator
+  - action: action_add_collaborator
+  - intent: ask_for_information
+  - action: action_get_information
+  - intent: goodbye
+  - action: utter_goodbye
