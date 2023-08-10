@@ -1,47 +1,55 @@
 version: "3.1"
 
 intents:
-- greet
-- goodbye
-- ask_for_information
-- modify_dates
-- add_collaborator
+  - greet
+  - ask_budget
+  - goodbye
+  - thanks
+  - ask_functionality
 
 entities:
-- name
-- job
-- start_date
-- end_date
+  - project
 
 slots:
-  name:
+  project:
     type: text
+    influence_conversation: true
     mappings:
-    - type: from_entity
-      entity: name
-  job:
-    type: text
-    mappings:
-    - type: from_entity
-      entity: job
-  start_date:
-    type: text
-    mappings:
-    - type: from_entity
-      entity: start_date
-  end_date:
-    type: text
-    mappings:
-    - type: from_entity
-      entity: end_date
+      - type: from_entity
+        entity: project
 
 responses:
   utter_greet:
-  - text: "Hello, I am the Olean Holidays assistant. How can I assist you?"
+  - text: "Hello! How can I assist you with the project budgets?"
+  - text: "Hi there! How can I help you today with the project budgets?"
+
+  utter_budget:
+  - text: "The budget for the project {project} is {budget}."
+  - text: "For the project {project}, the allocated budget is {budget}."
+
+  utter_unknown_project:
+  - text: "Sorry, I don't have information about that project."
+  - text: "I'm afraid I don't have the budget details for that project."
+
   utter_goodbye:
-  - text: "Goodbye!"
+  - text: "Goodbye! If you have any more questions in the future, feel free to ask."
+  - text: "Bye! Have a great day!"
+
+  utter_thanks:
+  - text: "You're welcome!"
+  - text: "My pleasure! Let me know if there's anything else."
+
+  utter_functionality:
+  - text: "I can provide you with budget details for various projects. Just ask me about the budget for a specific project!"
+  - text: "I'm here to help you with project budget details. Just mention the project name and I'll provide the budget."
 
 actions:
-- action_get_information
-- action_modify_dates
-- action_add_collaborator
+  - utter_greet
+  - action_fetch_budget
+  - utter_goodbye
+  - utter_thanks
+  - utter_functionality
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

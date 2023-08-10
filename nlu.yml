@@ -6,67 +6,67 @@ nlu:
     - Hello
     - Hi
     - Hey
-    - Greetings
-    - Hello, how are you?
-    - Hi there
+    - Hello there
     - Good day
-    - Hello, how's it going?
-    - Hi, nice to meet you
-    - Good to see you
+    - Greetings
+    - Hey there
+    - Good morning
+    - Good evening
+    - Howdy
+    - Hi there
+    - Salutations
+    - Heya
+    - Yo
+
+- intent: ask_budget
+  examples: |
+    - What's the budget for [soda 49](project)?
+    - How much is allocated for [chatbot](project)?
+    - Tell me the budget for [sophis upgrade](project)?
+    - Budget for [soda 49](project)?
+    - Can you tell me the budget of [soda 49](project)?
+    - How much money is set for [chatbot](project)?
+    - What are we spending on [sophis upgrade](project)?
+    - What's the financial allocation for [soda 49](project)?
+    - What's the cost of [chatbot](project)?
+    - How much are we investing in [sophis upgrade](project)?
+    - I'd like to know the budget for [soda 49](project)
+    - Can you share the allocated funds for [chatbot](project)?
+    - What's our expenditure on [sophis upgrade](project)?
+    - What's the projected cost for [soda 49](project)?
 
 - intent: goodbye
   examples: |
     - Goodbye
-    - See you soon
     - Bye
-    - Farewell
-    - See you next time
     - See you later
-    - Goodbye and thank you
-    - Thanks, goodbye
-    - Bye bye
-    - Have a good day
+    - Farewell
+    - Talk to you later
+    - See you soon
+    - Catch you later
+    - Bye for now
     - Take care
-    - Farewell, see you soon
-    - Goodbye, have a nice day
-    - See you, take care
+    - Signing off
 
-- intent: ask_for_information
+- intent: thanks
   examples: |
-    - What is the information for [oualid el kraiem](name)?
-    - Can you give me the details about [Yazid ouallouche](name)?
-    - What is the function of [Sarra Maknine](name)?
-    - How many days of leave does [Yassine amaghoss](name) have?
-    - When does [oualid el kraiem](name) start his leave?
-    - When does [Yazid ouallouche](name)'s leave end?
-    - I want details about [oualid el kraiem](name)
-    - Tell me more about [Yazid ouallouche](name)
-    - When does [Sarra Maknine](name) take her leave?
-    - When does [Yassine amaghoss](name)'s leave end?
-    - Can you tell me more about [oualid el kraiem](name)'s job role?
-    - What are the responsibilities of [Sarra Maknine](name)?
-    - How many days of annual leave does [Yassine amaghoss](name) have left?
-    - When is [oualid el kraiem](name) next scheduled to be on leave?
-    - What are the current leave dates for [Yazid ouallouche](name)?
-    - What's the job title of [Sarra Maknine](name)?
+    - Thank you
+    - Thanks
+    - Thanks a lot
+    - I appreciate it
+    - Thanks for the info
+    - Much appreciated
+    - You're the best
+    - Thanks for the help
+    - Thanks a bunch
+    - Thank you so much
 
-- intent: modify_dates
+- intent: ask_functionality
   examples: |
-    - Change the leave dates of [oualid el kraiem](name) starting from [2023-07-20](start_date) to [2023-07-30](end_date)
-    - Modify the leave dates of [Yazid ouallouche](name) to start on [2023-07-25](start_date) and end on [2023-08-05](end_date)
-    - I want to change the leave dates of [oualid el kraiem](name) from [2023-07-20](start_date) to [2023-07-30](end_date)
-    - Can you adjust the leave dates of [Yazid ouallouche](name) to start on [2023-07-25](start_date) and end on [2023-08-05](end_date)
-    - Modify the leave dates of [Sarra Maknine](name) to start on [2023-08-01](start_date) and end on [2023-08-15](end_date)
-    - I want to change the leave dates of [Yassine amaghoss](name) from [2023-08-05](start_date) to [2023-08-19](end_date)
-    - Please update the leave dates for [oualid el kraiem](name) to start on [2023-07-22](start_date) and end on [2023-07-30](end_date)
-    - Can you change [Yazid ouallouche](name)'s leave to start on [2023-07-25](start_date) and end on [2023-08-07](end_date)?
-    - Please amend the leave dates for [Sarra Maknine](name), starting on [2023-08-01](start_date) and ending on [2023-08-16](end_date)
+    - What can you do?
+    - What's your functionality?
+    - How can you assist me?
+    - Tell me about your capabilities.
+    - What are your features?
 
-- intent: add_collaborator
-  examples: |
-    - Add a new collaborator named [John Doe](name), who is a [Developer](job) with leave from [2023-08-01](start_date) to [2023-08-15](end_date)
-    - I want to add a new collaborator named [Jane Doe](name), she is a [Manager](job) and her leave is from [2023-08-10](start_date) to [2023-08-24](end_date)
-    - Can you add a collaborator named [Bob Smith](name) who is a [Project Manager](job) with leave from [2023-08-05](start_date) to [2023-08-19](end_date)
-    - Add a new collaborator named [Alice Johnson](name), she is a [Designer](job) and her leave is from [2023-08-20](start_date) to [2023-09-04](end_date)
-    - Can you add a new team member named [Sam Wilson](name)? He is a [Data Scientist](job) and his leave is scheduled from [2023-08-15](start_date) to [2023-08-25](end_date)
-    - Please add a new collaborator named [Lily Brown](name). She is a [Software Engineer](job) and will be on leave from [2023-08-20](start
+
