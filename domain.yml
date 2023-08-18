@@ -1,55 +1,46 @@
 version: "3.1"
 
 intents:
-  - greet
-  - ask_budget
-  - goodbye
-  - thanks
-  - ask_functionality
+- greet
+- thank
+- goodbye
+- inform
+- show_project_budget
+- show_overconsumption
+- show_budget_per_month_histogram
+- show_monthly_budget
 
 entities:
-  - project
+- project
 
 slots:
-  project:
+   project:
     type: text
-    influence_conversation: true
     mappings:
       - type: from_entity
         entity: project
 
+actions:
+- utter_greet
+- utter_thank_you
+- utter_goodbye
+- utter_ask_project_name
+- action_show_project_budget
+- action_show_overconsumption
+- action_show_budget_per_month_histogram
+- action_show_monthly_budget
+
 responses:
   utter_greet:
   - text: "Hello! How can I assist you with the project budgets?"
-  - text: "Hi there! How can I help you today with the project budgets?"
 
-  utter_budget:
-  - text: "The budget for the project {project} is {budget}."
-  - text: "For the project {project}, the allocated budget is {budget}."
-
-  utter_unknown_project:
-  - text: "Sorry, I don't have information about that project."
-  - text: "I'm afraid I don't have the budget details for that project."
+  utter_thank_you:
+  - text: "You're welcome!"
 
   utter_goodbye:
-  - text: "Goodbye! If you have any more questions in the future, feel free to ask."
-  - text: "Bye! Have a great day!"
+  - text: "Goodbye! If you have more questions, feel free to ask."
 
-  utter_thanks:
-  - text: "You're welcome!"
-  - text: "My pleasure! Let me know if there's anything else."
+  utter_ask_project_name:
+  - text: "Please provide the name of the project."
 
-  utter_functionality:
-  - text: "I can provide you with budget details for various projects. Just ask me about the budget for a specific project!"
-  - text: "I'm here to help you with project budget details. Just mention the project name and I'll provide the budget."
 
-actions:
-  - utter_greet
-  - action_fetch_budget
-  - utter_goodbye
-  - utter_thanks
-  - utter_functionality
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
