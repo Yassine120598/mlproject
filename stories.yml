@@ -1,24 +1,31 @@
 version: "3.1"
 
 stories:
-- story: Greet and ask budget
+- story: greet and provide info
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: ask_budget
-  - action: action_fetch_budget
+  - intent: inform
+  - action: action_show_project_budget
 
-- story: Directly ask for budget
+- story: show project budget
   steps:
-  - intent: ask_budget
-  - action: action_fetch_budget
+  - intent: show_project_budget
+  - action: action_show_project_budget
 
-- story: Thanking the bot
+- story: show project overconsumption
   steps:
-  - intent: thanks
-  - action: utter_thanks
+  - intent: show_overconsumption
+  - action: action_show_overconsumption
 
-- story: Asking bot functionality
+- story: show budget per month histogram
   steps:
-  - intent: ask_functionality
-  - action: utter_functionality
+  - intent: show_budget_per_month_histogram
+  - action: action_show_budget_per_month_histogram
+
+- story: show monthly budget
+  steps:
+  - intent: show_monthly_budget
+  - action: action_show_monthly_budget
+
+

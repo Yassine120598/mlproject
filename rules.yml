@@ -1,24 +1,29 @@
 version: "3.1"
 
 rules:
-
-- rule: Say hello back
+  
+# Si l'utilisateur salue le bot, le bot répond avec une salutation
+- rule: Say hello
   steps:
   - intent: greet
   - action: utter_greet
 
-- rule: Thank the user
+# Si l'utilisateur remercie le bot, le bot répond avec une réponse appropriée
+- rule: Say thank you
   steps:
-  - intent: thanks
-  - action: utter_thanks
+  - intent: thank
+  - action: utter_thank_you
 
-- rule: Say goodbye to the user
+# Si l'utilisateur fait ses adieux, le bot répond également
+- rule: Say goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Describe the bot's functionality
+# Si l'utilisateur fournit le nom du projet après que le bot ait demandé, le bot montre le budget
+- rule: Provide project name after being asked
   steps:
-  - intent: ask_functionality
-  - action: utter_functionality
+  - action: utter_ask_project_name
+  - intent: inform
+  - action: action_show_project_budget
 

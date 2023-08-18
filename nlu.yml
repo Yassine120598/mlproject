@@ -6,67 +6,64 @@ nlu:
     - Hello
     - Hi
     - Hey
-    - Hello there
     - Good day
-    - Greetings
-    - Hey there
-    - Good morning
-    - Good evening
-    - Howdy
-    - Hi there
-    - Salutations
-    - Heya
-    - Yo
 
-- intent: ask_budget
+- intent: thank
   examples: |
-    - What's the budget for [soda 49](project)?
-    - How much is allocated for [chatbot](project)?
-    - Tell me the budget for [sophis upgrade](project)?
-    - Budget for [soda 49](project)?
-    - Can you tell me the budget of [soda 49](project)?
-    - How much money is set for [chatbot](project)?
-    - What are we spending on [sophis upgrade](project)?
-    - What's the financial allocation for [soda 49](project)?
-    - What's the cost of [chatbot](project)?
-    - How much are we investing in [sophis upgrade](project)?
-    - I'd like to know the budget for [soda 49](project)
-    - Can you share the allocated funds for [chatbot](project)?
-    - What's our expenditure on [sophis upgrade](project)?
-    - What's the projected cost for [soda 49](project)?
+    - Thanks
+    - Thank you
+    - Thanks a lot
+    - Thanks for the help
 
 - intent: goodbye
   examples: |
-    - Goodbye
     - Bye
+    - Goodbye
     - See you later
     - Farewell
-    - Talk to you later
-    - See you soon
-    - Catch you later
-    - Bye for now
-    - Take care
-    - Signing off
 
-- intent: thanks
+- intent: inform
   examples: |
-    - Thank you
-    - Thanks
-    - Thanks a lot
-    - I appreciate it
-    - Thanks for the info
-    - Much appreciated
-    - You're the best
-    - Thanks for the help
-    - Thanks a bunch
-    - Thank you so much
+    - The project is [soda 49](project)
+    - It's [sophis upgrade](project)
+    - I'm talking about [chatbot](project)
+    - The project name is [soda 49](project)
 
-- intent: ask_functionality
+- intent: show_project_budget
   examples: |
-    - What can you do?
-    - What's your functionality?
-    - How can you assist me?
-    - Tell me about your capabilities.
-    - What are your features?
+    - What's the budget for project [soda 49](project)?
+    - How much is allocated for the project [sophis upgrade](project)?
+    - Show me the budget for [chatbot](project).
+    - Can you tell me the budget of [soda 49](project)?
+    - How much money was allocated for [sophis upgrade](project)?
+    - What have we set aside for [chatbot](project)?
+    - How much funding does [soda 49](project) have?
+
+- intent: show_overconsumption
+  examples: |
+    - What's the overconsumption of project [soda 49](project)?
+    - How much was overconsumed for [sophis upgrade](project)?
+    - Show me the overconsumption for [chatbot](project).
+    - Can you provide the overconsumption details for [soda 49](project)?
+    - How much budget exceeded for [chatbot](project)?
+    - Was there any overconsumption for [sophis upgrade](project)?
+
+- intent: show_budget_per_month_histogram
+  examples: |
+    - Display a histogram of the budget allocated each month.
+    - I'd like to see a chart of the monthly allocations.
+    - Show me a histogram of the budget set aside each month.
+    - Can you graph the monthly allocations for me?
+    - I want to visualize the monthly budget allocation.
+    - How does the monthly budget allocation look?
+
+- intent: show_monthly_budget
+  examples: |
+    - What's the monthly budget for project [soda 49](project)?
+    - How much was allocated each month for [sophis upgrade](project)?
+    - Can you breakdown the monthly budget for [chatbot](project)?
+    - I'd like to see the budget distribution for [soda 49](project) across months.
+    - Show me the monthly budget details for [chatbot](project).
+    - What's the month-wise funding for [soda 49](project)?
 
 
