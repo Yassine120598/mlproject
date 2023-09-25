@@ -9,12 +9,13 @@ intents:
 - show_overconsumption
 - show_budget_per_month_histogram
 - show_monthly_budget
+- ask_budget
 
 entities:
 - project
 
 slots:
-   project:
+  project:
     type: text
     mappings:
       - type: from_entity
@@ -29,15 +30,25 @@ actions:
 - action_show_overconsumption
 - action_show_budget_per_month_histogram
 - action_show_monthly_budget
+- utter_ask_specific_budget
 
 responses:
   utter_greet:
-  - text: "Hi, I'm the Olean assistant. How can I help you?"
-    buttons:
-    - title: "Budget"
-      payload: "/show_project_budget"
-    - title: "Holidays"
-      payload: "/show_monthly_budget"  # Remplacez ceci par l'intent approprié lié aux vacances
+  - text: "Hello! I'm the Olean Assistant. How can I help you?"
+    custom:
+      blocks:
+      - type: "carousel"
+        elements:
+        - title: "Budget"
+          image_url: "https://via.placeholder.com/150"
+          buttons:
+          - title: "Learn about Budget"
+            payload: "/show_project_budget"
+        - title: "Holidays"
+          image_url: "https://via.placeholder.com/150"
+          buttons:
+          - title: "Learn about Holidays"
+            payload: "/show_overconsumption"
 
   utter_thank_you:
   - text: "You're welcome!"
@@ -47,4 +58,9 @@ responses:
 
   utter_ask_project_name:
   - text: "Please provide the name of the project."
+
+  utter_ask_specific_budget:
+  - text: "Sorry, I'm afraid I need more specifics to deliver you a response. Could you specify your request?"
+
+
 
