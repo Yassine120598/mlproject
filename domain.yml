@@ -32,7 +32,12 @@ actions:
 
 responses:
   utter_greet:
-  - text: "Hello! How can I assist you with the project budgets?"
+  - text: "Hi, I'm the Olean assistant. How can I help you?"
+    buttons:
+    - title: "Budget"
+      payload: "/show_project_budget"
+    - title: "Holidays"
+      payload: "/show_monthly_budget"  # Remplacez ceci par l'intent approprié lié aux vacances
 
   utter_thank_you:
   - text: "You're welcome!"
@@ -42,5 +47,4 @@ responses:
 
   utter_ask_project_name:
   - text: "Please provide the name of the project."
-
 
